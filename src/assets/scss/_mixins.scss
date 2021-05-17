@@ -1,0 +1,23 @@
+@mixin breakpoint($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin container($viewport-size) {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $viewport-size;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+@mixin margin-top($gap) {
+	& > * {
+		margin-top: $gap;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

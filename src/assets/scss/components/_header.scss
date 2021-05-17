@@ -1,0 +1,47 @@
+h1 {
+	font-weight: 300;
+}
+
+header {
+	background: linear-gradient(-45deg, $color-institutional-1 45%, $color-white 45%);
+	margin-bottom: calc(158px + 4rem);
+
+	hgroup {
+		@include container($viewport-size-landscape);
+
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+		position: relative;
+	}
+
+	img {
+		border-radius: 100%;
+		bottom: 0;
+		position: absolute;
+		right: 0;
+		transform: translateY(50%);
+	}
+
+	p {
+		animation: .5s ease-out popOut;
+		background-color: $color-white;
+		border-radius: 1rem;
+		color: $color-front-dark;
+		margin-top: 75px;
+		padding: 2rem;
+		position: absolute;
+		right: 150px;
+		top: 100%;
+
+		&::before {
+			border: 1rem solid transparent;
+			border-top-color: $color-white;
+			border-left-color: $color-white;
+			content: '';
+			left: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-8px, -50%) rotate(-15deg);
+		}
+	}
+}

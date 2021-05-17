@@ -1,0 +1,15 @@
+.button {
+	border: 0 none;
+	border-radius: 100px;
+	cursor: pointer;
+	font-family: $font-family-reglar;
+	padding: .5rem 1rem;
+
+	&--subtle {
+		background-color: $color-grayscale-9;
+
+		&:hover, &.active {
+			background-color: $color-grayscale-8;
+		}
+	}
+}

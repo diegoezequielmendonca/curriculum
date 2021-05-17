@@ -1,0 +1,93 @@
+article {
+	@include margin-top(4rem);
+}
+
+h3 {
+	background-color: $color-institutional-1;
+	color: $color-white;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: 700;
+	height: 44px;
+	line-height: 44px;
+	margin-left: 44px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	position: relative;
+
+	&::after, &::before {
+		border: 22px solid transparent;
+		content: '';
+		display: block;
+	}
+
+	&::after {
+		border-left-color: $color-institutional-1;
+		border-top-color: $color-institutional-1;
+		float: right;
+		margin-right: -60px;
+	}
+
+	&::before {
+		border-bottom-color: $color-institutional-1;
+		border-right-color: $color-institutional-1;
+		float: left;
+		margin-left: -60px;
+	}
+}
+
+main {
+	@include container($viewport-size-landscape);
+	@include margin-top(6rem);
+}
+
+.demo {
+	background-color: $color-background-light;
+	text-align: center;
+	padding: 1rem;
+	width: 100%;
+
+	img {
+		display: inline-block;
+		margin-left: .5rem;
+		margin-right: .5rem;
+	}
+}
+
+.hero {
+	@extend .flex;
+	@extend .flex--space-evenly;
+	position: relative;
+
+	img {
+		max-width: 300px;
+	}
+
+	&__logos {
+		@extend .flex;
+		@extend .flex--right;
+		
+		img {
+			margin-left: .5rem;
+			margin-top: .5rem;
+			max-width: 1.5rem;
+			max-height: 1.5rem;
+		}
+	}
+
+	&::before {
+		@extend .position--center;
+		background: url(../img/icon--arrow.svg) no-repeat center $color-institutional-1;
+		background-size: 50px;
+		box-shadow: 0 .25rem 1rem -.5rem $color-black;
+		border-radius: 100%;
+		content: '';
+		height: 60px;
+		width: 60px;
+	}
+}
+
+.logo {
+	max-height: 150px;
+	max-width: 150px;
+}
