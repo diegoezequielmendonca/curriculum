@@ -1,4 +1,4 @@
-# Blacksmith
+_Author: Diego Mendonca_
 
 ## Installation
 
