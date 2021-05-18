@@ -85,6 +85,19 @@ main {
 		height: 60px;
 		width: 60px;
 	}
+
+	@include breakpoint($viewport-size-landscape) {
+		@include margin-top(6rem);
+
+		align-items: center;
+		flex-direction: column;
+
+		&::before {
+			left: unset;
+			top: unset;
+			transform: rotate(90deg);
+		}
+	}
 }
 
 .logo {

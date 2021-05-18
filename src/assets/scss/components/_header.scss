@@ -44,4 +44,22 @@ header {
 			transform: translate(-8px, -50%) rotate(-15deg);
 		}
 	}
+
+	@include breakpoint($viewport-size-landscape) {
+		img {
+			height: 100px;
+			right: 2rem;
+		}
+
+		p {
+			margin-left: 1rem;
+			right: 50px;
+
+			&::before {
+				left: 80%;
+				top: 0;
+				transform: translate(-8px, -50%) rotate(-50deg);
+			}
+		}
+	}
 }
